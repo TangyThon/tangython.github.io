@@ -25,7 +25,7 @@ html {
 }
 
 .padding-128 {
-    padding: 4rem;
+    padding: 3rem;
 }
 
 .padding-256 {
@@ -439,6 +439,10 @@ nav {
 
 
 @media screen and (min-width: 600px) {
+
+    .padding-128 {
+        padding: 4rem;
+    }
 
     nav {
         padding: 0.5rem 10% 0 10%;
