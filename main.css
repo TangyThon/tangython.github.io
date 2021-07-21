@@ -1,0 +1,619 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    background: #f2e7de;
+    scroll-behavior: smooth;
+}
+
+.padding-under-nav {
+    padding: 5rem;
+}
+
+.padding-32 {
+    padding: 0.5rem;
+}
+
+.padding-64 {
+    padding: 2rem;
+}
+
+.padding-128 {
+    padding: 4rem;
+}
+
+.padding-256 {
+    padding: 8rem;
+}
+
+body, body a {
+    color: #333231;
+    text-decoration: none;
+    font: inherit;
+    vertical-align: center;
+}
+
+#body.scroll {
+    overflow: hidden;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333231;
+}
+
+p {
+    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333231;
+}
+
+::selection {
+    background-color: #dcbfa7;
+    color: #f2e7de;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    background: #f2e7de;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 3;
+    padding: 0.5rem 5% 0 5%;
+    transition: top 0.3s ease 0s;
+}
+
+.nav-title {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333231;
+}
+
+.FTK-button {
+    display: none;
+    padding-right: 15%;
+}
+
+#hamburger {
+    display: block;
+}
+
+#hamburger.turn {
+    animation: hamburger-turn 0.5s;
+}
+
+@keyframes hamburger-turn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#hamburger.show {
+    display:none
+}
+
+#x {
+    display: none;
+    z-index: 2;
+}
+
+#x.turn {
+    animation: x-turn 0.5s;
+}
+
+@keyframes x-turn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#x.show {
+    display: block;
+}
+
+#nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff668;
+    overflow: hidden;
+}
+
+#nav-overlay.show {
+    display: block;
+}
+
+.nav-home-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+}
+
+.nav-links-block {
+    text-align: center;
+    margin: 2rem
+}
+
+.nav-links {
+    list-style: none;
+    width: 100%;
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #333231;
+}
+
+#nav-arrow-1, #nav-arrow-2, #nav-arrow-3, #nav-arrow-4, #nav-arrow-5 {
+    position: relative;
+}
+
+#nav-arrow-1.move, #nav-arrow-2.move, #nav-arrow-3.move, #nav-arrow-4.move, #nav-arrow-5.move {
+    animation: arrow-move 20s;
+}
+
+@keyframes arrow-move {
+    0% {
+        left: 0px;
+    }
+    2.5% {
+        left: 16px;
+    }
+    100% {
+        left: 16px;
+    }
+}
+
+.instagram-mini-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.nav-line {
+    width: 100%;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+}
+
+.text-block {
+    width: 100%;
+}
+
+.text-block-h1 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333231;
+    line-height: 1.2;
+}
+
+.text-block-p {
+    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333231;
+    line-height: 1.2;
+}
+
+.text-block-button {
+    width: 50%;
+}
+
+.media-block {
+    width: 40%;
+    padding-top: 8rem;
+}
+
+.media-block-2 {
+    display: none;
+}
+
+.media-block-3 {
+    padding-top: 0;
+    padding-bottom: 8rem;
+}
+
+.media-block-4 {
+    padding-top: 8rem;
+}
+
+.funds-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5%;
+}
+
+.funds-h1 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #333231;
+    line-height: 1.2;
+    font-style: italic;
+    text-align: center;
+}
+
+.funds-p {
+    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.funds-FTK {
+    width: 50%;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.footer-p p {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.instagram:hover {
+    transform: scale(1.05);
+}
+
+.executive-block-h1 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.dots-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 20%;
+}
+  
+.dots-container .dot {
+    cursor: pointer;
+    margin: 5px;
+    width: 12px;
+    height: 12px;
+    color: #333231;
+    border-radius: 50%;
+    background-color: #dcbfa7;
+}
+  
+.dots-container .dot.active {
+    border: 3px solid #f2e7de;
+}
+  
+.slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20%;
+    position: relative;
+}
+  
+.slide-container .slide {
+    display: none;
+    width: 100%;
+}
+  
+.slide-container .slide.fade {
+    animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+  
+.slide-container .slide img {
+    width: 100%;
+}
+
+.slide-title {
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.slide-title-2 {
+    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.upcoming-events-block-h1 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.upcoming-event-h2 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.upcoming-event-p {
+    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.past-events-block-h1 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.sponsors-block-h1 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.sponsor-h2 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #333231;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 10%;
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+    nav {
+        padding: 0.5rem 10% 0 10%;
+    }
+
+    .content-block {
+        flex-direction: row;
+        margin: 0 10%;
+    }
+
+    .text-block {
+        width: 70%;
+    }
+
+    .text-block-h1 {
+        font-size: 3rem;
+    }
+
+    .text-block-p {
+        font-size: 1.25rem;
+    }
+
+    .media-block {
+        width: 20%;
+        padding-top: 0;
+    }
+
+    .media-block-2 {
+        display: block;
+    }
+
+    .media-block-3 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .media-block-4 {
+        display: none;
+        padding-top: 0;
+    }
+
+    .funds-block {
+        margin: 0 10%;
+    }
+
+    .funds-h1 {
+        font-size: 3rem;
+    }
+
+    .funds-p {
+        font-size: 1.25rem;
+    }
+
+    .funds-FTK {
+        width: 40%;
+    }
+
+    .footer-p p {
+        font-size: 1rem;
+    }
+
+    .executive-block-h1 {
+        font-size: 3rem;
+    }
+
+    .slide-container {
+        margin: 0 30%;
+    }
+
+    .dots-container {
+        margin: 0 30%;
+    }
+
+    .slide-title {
+        font-size: 1rem;
+    }
+    
+    .slide-title-2 {
+        font-size: 1rem;
+    }
+
+    .upcoming-events-block-h1 {
+        font-size: 3rem;
+    }
+
+    .upcoming-event-h2 {
+        font-size: 1.25rem;
+    }
+
+    .upcoming-event-p {
+        font-size: 1.25rem;
+    }
+
+    .past-events-block-h1 {
+        font-size: 3rem;
+    }
+
+    .sponsors-block-h1 {
+        font-size: 3rem;
+    }
+
+    .sponsor-h2 {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+
+    .padding-32 {
+        padding: 1rem;
+    }
+
+    .FTK-button {
+        display: block;
+    }
+
+    .text-block-h1 {
+        font-size: 4rem;
+    }
+
+    .text-block-p {
+        font-size: 1.5rem;
+    }
+
+    .text-block-button {
+        width: 50%;
+    }
+
+    .funds-h1 {
+        font-size: 6rem;
+    }
+
+    .funds-p {
+        font-size: 1.5rem;
+    }
+
+    .funds-FTK {
+        width: 35%;
+    }
+
+    .executive-block-h1 {
+        font-size: 4rem;
+    }
+
+    .upcoming-events-block-h1 {
+        font-size: 4rem;
+    }
+
+    .upcoming-event-h2 {
+        font-size: 1.5rem;
+    }
+
+    .upcoming-event-p {
+        font-size: 1.5rem;
+    }
+
+    .past-events-block-h1 {
+        font-size: 4rem;
+    }
+
+    .sponsors-block-h1 {
+        font-size: 4rem;
+    }
+
+    .sponsor-h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .funds-h1 {
+        font-size: 8rem;
+    }
+
+}
